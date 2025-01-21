@@ -1,0 +1,13 @@
+The `@apply` directive is best suited for base styles.  For pseudo-classes, it is recommended to directly apply the styles. 
+
+```css
+.btn {
+  @apply bg-blue-500 text-white px-4 py-2 rounded;
+}
+
+.btn:hover {
+  background-color: rgb(var(--tw-bg-opacity) 100%,var(--tw-blue-700));
+}
+```
+
+This solution removes the use of `@apply` within the pseudo-class and instead defines the hover styles directly using Tailwind's variable system. This method ensures that the hover style is correctly applied without relying on `@apply` for the pseudo-class.
